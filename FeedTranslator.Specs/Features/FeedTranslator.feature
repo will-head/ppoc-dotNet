@@ -22,3 +22,8 @@ Scenario: http to feed, with parameter in feed
   Given I have an http: feed "http://example.com/feed?rss"
   When it is translated
   Then it should be a feed: feed "feed://example.com/feed?rss"
+
+Scenario: http to feed, with parameter equals in feed
+  Given I have an http: feed "http://example.com/feed?format=rss"
+  When it is translated
+  Then it should be a feed: feed "feed://example.com/feed?format=rss"
