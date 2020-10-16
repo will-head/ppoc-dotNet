@@ -27,6 +27,18 @@ namespace FeedTranslator.Specs.Steps
         {
             _result = _feed_translator.Feed();
         }
+
+        [When(@"it is translated to itpc")]
+        public void WhenItIsTranslatedToItpc()
+        {
+            _result = _feed_translator.Itpc();
+        }
+        
+        [Then(@"it should be feed ""(.*)""")]
+        public void ThenItShouldBeFeed(string expectedResult)
+        {
+            _result.Should().Be(expectedResult);
+        }
         
         [Then(@"it should be a feed: feed ""(.*)""")]
         public void ThenItShouldBeAFeedFeed(string expectedResult)

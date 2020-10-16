@@ -22,5 +22,17 @@ namespace FeedTranslator
             uri.Scheme = "feed";
             return uri.ToString();
         }
+
+        public string Itpc()
+        {
+            var uri = new UriBuilder(this.request);
+            if (uri.Uri.IsDefaultPort)
+            {
+                uri.Port = -1;
+            }
+
+            uri.Scheme = "itpc";
+            return uri.ToString();
+        }
     }
 }

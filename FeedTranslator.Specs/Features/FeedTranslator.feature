@@ -42,3 +42,8 @@ Scenario: https to feed
   Given I have an http: feed "https://example.com/feed/"
   When it is translated
   Then it should be a feed: feed "feed://example.com/feed/"
+
+Scenario: http to itcp
+  Given I have an http: feed "http://example.com/feed"
+  When it is translated to itpc
+  Then it should be feed "itpc://example.com/feed"
