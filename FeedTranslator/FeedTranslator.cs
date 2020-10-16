@@ -12,7 +12,7 @@ namespace FeedTranslator
 
         public string Feed()
         {
-            return "feed";
+            return "feed://example.com/feed";
         }
     }
 }

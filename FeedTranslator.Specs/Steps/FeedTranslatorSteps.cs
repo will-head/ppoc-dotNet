@@ -29,9 +29,9 @@ namespace FeedTranslator.Specs.Steps
         }
         
         [Then(@"it should be a feed: feed ""(.*)""")]
-        public void ThenItShouldBeAFeedFeed(string p0)
+        public void ThenItShouldBeAFeedFeed(string expectedResult)
         {
-            _scenarioContext.Pending();
+            _result.Should().Be(expectedResult);
         }
 
     }
