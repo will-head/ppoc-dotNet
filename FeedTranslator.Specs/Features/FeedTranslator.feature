@@ -5,6 +5,6 @@
 
 @mytag
 Scenario: http to feed
-	Given I have a feed http://example.com/feed
-	When I press feed
-	Then the result should be feed://example.com/feed
+	Given I have an http: feed "http://example.com/feed"
+	When it is translated
+	Then it should be a feed: feed "feed://example.com/feed"
