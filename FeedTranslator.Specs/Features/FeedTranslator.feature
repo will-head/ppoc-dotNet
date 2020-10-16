@@ -37,3 +37,8 @@ Scenario: http to feed, with username in feed
   Given I have an http: feed "http://user@example.com/feed"
   When it is translated
   Then it should be a feed: feed "feed://user@example.com/feed"
+
+Scenario: http to feed, with username and password in feed
+  Given I have an http: feed "http://user:password@example.com/feed"
+  When it is translated
+  Then it should be a feed: feed "feed://user:password@example.com/feed"
