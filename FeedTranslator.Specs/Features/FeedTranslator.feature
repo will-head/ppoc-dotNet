@@ -32,3 +32,8 @@ Scenario: http to feed, with extension in feed
   Given I have an http: feed "http://example.com/feed.rss"
   When it is translated
   Then it should be a feed: feed "feed://example.com/feed.rss"
+
+Scenario: http to feed, with username in feed
+  Given I have an http: feed "http://user@example.com/feed"
+  When it is translated
+  Then it should be a feed: feed "feed://user@example.com/feed"
