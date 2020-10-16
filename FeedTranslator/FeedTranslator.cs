@@ -9,5 +9,10 @@ namespace FeedTranslator
         {
             Console.WriteLine(request);
         }
+
+        public string Feed()
+        {
+            return "feed";
+        }
     }
 }

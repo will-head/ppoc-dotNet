@@ -8,6 +8,7 @@ namespace FeedTranslator.Specs.Steps
     public class FeedTranslatorSteps
     {
         private FeedTranslator _feed_translator;
+        private string _result;
         private readonly ScenarioContext _scenarioContext;
 
         public FeedTranslatorSteps(ScenarioContext scenarioContext)
@@ -24,7 +25,7 @@ namespace FeedTranslator.Specs.Steps
         [When(@"it is translated")]
         public void WhenItIsTranslated()
         {
-            _scenarioContext.Pending();
+            _result = _feed_translator.Feed();
         }
         
         [Then(@"it should be a feed: feed ""(.*)""")]
