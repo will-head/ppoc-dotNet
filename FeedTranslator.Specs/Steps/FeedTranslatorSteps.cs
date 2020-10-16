@@ -17,9 +17,9 @@ namespace FeedTranslator.Specs.Steps
         }
 
         [Given(@"I have an http: feed ""(.*)""")]
-        public void GivenIHaveAnHttpFeed(string p0)
+        public void GivenIHaveAnHttpFeed(string input)
         {
-            _feed_translator = new FeedTranslator(p0);
+            _feed_translator = new FeedTranslator(input);
         }
         
         [When(@"it is translated")]
