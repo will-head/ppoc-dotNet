@@ -21,8 +21,14 @@ namespace FeedTranslator.Specs.Steps
             _feed_translator = new FeedTranslator(p0);
         }
         
-        [Then(@"it should be translated into a feed: feed ""(.*)""")]
-        public void ThenItShouldBeTranslatedIntoAFeedFeed(string p0)
+        [When(@"it is translated")]
+        public void WhenItIsTranslated()
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Then(@"it should be a feed: feed ""(.*)""")]
+        public void ThenItShouldBeAFeedFeed(string p0)
         {
             _scenarioContext.Pending();
         }
