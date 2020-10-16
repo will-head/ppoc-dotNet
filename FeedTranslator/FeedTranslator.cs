@@ -5,33 +5,32 @@ namespace FeedTranslator
     public class FeedTranslator
     {
         private string request;
+        private UriBuilder uri;
 
         public FeedTranslator(string request)
         {
             this.request = request;
+            this.uri = new UriBuilder(this.request);
         }
 
         public string Feed()
         {
-            var uri = new UriBuilder(this.request);
-            if (uri.Uri.IsDefaultPort)
-            {
-                uri.Port = -1;
-            }
-
-            uri.Scheme = "feed";
-            return uri.ToString();
+          return this.ReplaceScheme(this.uri, "feed");
         }
 
         public string Itpc()
         {
-            var uri = new UriBuilder(this.request);
+            return this.ReplaceScheme(this.uri, "itpc");
+        }
+
+        private string ReplaceScheme(UriBuilder uri, string scheme)
+        {
             if (uri.Uri.IsDefaultPort)
             {
                 uri.Port = -1;
             }
 
-            uri.Scheme = "itpc";
+            uri.Scheme = scheme;
             return uri.ToString();
         }
     }
