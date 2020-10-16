@@ -16,14 +16,14 @@ namespace FeedTranslator.Specs.Steps
             _scenarioContext = scenarioContext;
         }
 
-        [Given(@"I have an http: feed ""(.*)""")]
-        public void GivenIHaveAnHttpFeed(string input)
+        [Given(@"I have a feed ""(.*)""")]
+        public void GivenIHaveAFeed(string input)
         {
             _feed_translator = new FeedTranslator(input);
         }
-        
-        [When(@"it is translated")]
-        public void WhenItIsTranslated()
+
+        [When(@"it is translated to feed")]
+        public void WhenItIsTranslatedToFeed()
         {
             _result = _feed_translator.Feed();
         }
@@ -36,12 +36,6 @@ namespace FeedTranslator.Specs.Steps
         
         [Then(@"it should be feed ""(.*)""")]
         public void ThenItShouldBeFeed(string expectedResult)
-        {
-            _result.Should().Be(expectedResult);
-        }
-        
-        [Then(@"it should be a feed: feed ""(.*)""")]
-        public void ThenItShouldBeAFeedFeed(string expectedResult)
         {
             _result.Should().Be(expectedResult);
         }
