@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<RuleSet Name="StyleCop.Analyzers custom rules" Description="StyleCop.Analyzers modified from defaults" ToolsVersion="14.0">
+    <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.SpecialRules">
+        <Rule Id="SA0001"  Action="None" />          <!-- XML comment analysis disabled -->
+    </Rules>
+
+    <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.OrderingRules">
+        <Rule Id="SA1200"  Action="None" />          <!-- Using directives should be placed correctly -->
+    </Rules>
+
+    <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.DocumentationRules">
+        <Rule Id="SA1633"  Action="None" />          <!-- File should have header -->
+    </Rules>
+</RuleSet>
