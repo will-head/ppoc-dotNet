@@ -7,3 +7,8 @@ Scenario: http to feed for "http://example.com/feed"
 	Given I have an http: feed "http://example.com/feed"
   When it is translated
   Then it should be a feed: feed "feed://example.com/feed"
+
+Scenario: http to feed for "http://example.com/feed2"
+  Given I have an http: feed "http://example.com/feed2"
+  When it is translated
+  Then it should be a feed: feed "feed://example.com/feed2"
