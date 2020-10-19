@@ -40,6 +40,12 @@ namespace FeedTranslator.Specs.Steps
             _result = _feed_translator.Podcast();
         }
         
+        [When(@"it is translated to downcast")]
+        public void WhenItIsTranslatedToDowncast()
+        {
+            _result = _feed_translator.Downcast();
+        }
+
         [Then(@"it should be feed ""(.*)""")]
         public void ThenItShouldBeFeed(string expectedResult)
         {

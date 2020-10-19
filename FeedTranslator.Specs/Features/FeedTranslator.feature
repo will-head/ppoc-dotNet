@@ -52,3 +52,8 @@ Scenario: http to podcast
   Given I have a feed "http://example.com/feed"
   When it is translated to podcast
   Then it should be feed "podcast://example.com/feed"
+
+Scenario: http to downcast
+  Given I have a feed "http://example.com/feed"
+  When it is translated to downcast
+  Then it should be feed "downcast://example.com/feed"

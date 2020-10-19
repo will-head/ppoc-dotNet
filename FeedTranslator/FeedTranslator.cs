@@ -28,6 +28,11 @@ namespace FeedTranslator
             return this.ReplaceScheme(this.uri, "podcast");
         }
 
+        public string Downcast()
+        {
+            return this.ReplaceScheme(this.uri, "downcast");
+        }
+
         private string ReplaceScheme(UriBuilder uri, string scheme)
         {
             if (uri.Uri.IsDefaultPort)
