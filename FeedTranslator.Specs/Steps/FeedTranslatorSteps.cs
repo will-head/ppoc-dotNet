@@ -1,8 +1,8 @@
-﻿using FeedTranslator;
+﻿using Ppoc;
 using FluentAssertions;
 using TechTalk.SpecFlow;
 
-namespace FeedTranslator.Specs.Steps
+namespace Ppoc.Specs.Steps
 {
     [Binding]
     public class FeedTranslatorSteps

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FeedTranslator
+namespace Ppoc
 {
     public class FeedTranslator
     {
