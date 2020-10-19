@@ -57,3 +57,8 @@ Scenario: http to downcast
   Given I have a feed "http://example.com/feed"
   When it is translated to downcast
   Then it should be feed "downcast://example.com/feed"
+
+Scenario: http to pcast
+  Given I have a feed "http://example.com/feed"
+  When it is translated to pcast
+  Then it should be feed "pcast://example.com/feed"

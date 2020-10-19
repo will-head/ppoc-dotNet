@@ -33,6 +33,11 @@ namespace FeedTranslator
             return this.ReplaceScheme(this.uri, "downcast");
         }
 
+        public string Pcast()
+        {
+            return this.ReplaceScheme(this.uri, "pcast");
+        }
+
         private string ReplaceScheme(UriBuilder uri, string scheme)
         {
             if (uri.Uri.IsDefaultPort)
