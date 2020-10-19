@@ -9,9 +9,10 @@ namespace ConsoleApplication
 
         public static void Main(string[] args)
         {
-            string input = "http://example.com/feed";
+            Console.WriteLine("\nEnter a feed: ");
+            string input = Console.ReadLine();
             feedTranslator = new FeedTranslator(input);
-            Console.WriteLine(feedTranslator.Feed());
+            Console.WriteLine($"\nYour translated feed is:\n{feedTranslator.Itpc()}");
         }
     }
 }
