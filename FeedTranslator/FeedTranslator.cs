@@ -23,6 +23,11 @@ namespace FeedTranslator
             return this.ReplaceScheme(this.uri, "itpc");
         }
 
+        public string Podcast()
+        {
+            return this.ReplaceScheme(this.uri, "podcast");
+        }
+
         private string ReplaceScheme(UriBuilder uri, string scheme)
         {
             if (uri.Uri.IsDefaultPort)

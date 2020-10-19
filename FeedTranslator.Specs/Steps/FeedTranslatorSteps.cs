@@ -33,6 +33,12 @@ namespace FeedTranslator.Specs.Steps
         {
             _result = _feed_translator.Itpc();
         }
+
+        [When(@"it is translated to podcast")]
+        public void WhenItIsTranslatedToPodcast()
+        {
+            _result = _feed_translator.Podcast();
+        }
         
         [Then(@"it should be feed ""(.*)""")]
         public void ThenItShouldBeFeed(string expectedResult)

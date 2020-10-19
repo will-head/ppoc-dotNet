@@ -47,3 +47,8 @@ Scenario: http to itcp
   Given I have a feed "http://example.com/feed"
   When it is translated to itpc
   Then it should be feed "itpc://example.com/feed"
+
+Scenario: http to podcast
+  Given I have a feed "http://example.com/feed"
+  When it is translated to podcast
+  Then it should be feed "podcast://example.com/feed"
