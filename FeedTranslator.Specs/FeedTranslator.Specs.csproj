@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../FeedTranslator/FeedTranslator.csproj" />
+    <ProjectReference Include="../Ppoc/Ppoc.csproj" />
   </ItemGroup>
 
 </Project>
