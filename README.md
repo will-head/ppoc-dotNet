@@ -31,6 +31,8 @@ $ dotnet run -p Ppoc/Ppoc.csproj
 This will prompt for a podcast feed and the format for it to be translated into to. Formats currently supported are:
 
 ```
+http
+https 
 feed
 itpc
 podcast
