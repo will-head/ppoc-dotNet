@@ -1,5 +1,6 @@
 ﻿using System;
 using Ppoc;
+using StringExtensions;
 
 namespace ConsoleApplication
 {
@@ -11,8 +12,14 @@ namespace ConsoleApplication
         {
             Console.WriteLine("\nEnter a feed: ");
             string input = Console.ReadLine();
+
+            Console.WriteLine("\nEnter a feed format: ");
+            string outputFeedType = Console.ReadLine().ToTitleCase();
+
             feedTranslator = new FeedTranslator(input);
-            Console.WriteLine($"\nYour translated feed is:\n{feedTranslator.Itpc()}");
+            string outputFeed = (string)feedTranslator.GetType().GetMethod(outputFeedType).Invoke(feedTranslator, null);
+
+            Console.WriteLine($"\nYour translated feed is:\n{outputFeed}");
         }
     }
 }
