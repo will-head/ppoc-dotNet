@@ -13,6 +13,11 @@ namespace Ppoc
             this.uri = new UriBuilder(this.request);
         }
 
+        public string Http()
+        {
+          return this.ReplaceScheme(this.uri, "http");
+        }
+
         public string Feed()
         {
           return this.ReplaceScheme(this.uri, "feed");

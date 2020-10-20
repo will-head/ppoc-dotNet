@@ -22,6 +22,12 @@ namespace Ppoc.Specs.Steps
             _feed_translator = new FeedTranslator(input);
         }
 
+        [When(@"it is translated to http")]
+        public void WhenItIsTranslatedToHttp()
+        {
+            _result = _feed_translator.Http();
+        }
+
         [When(@"it is translated to feed")]
         public void WhenItIsTranslatedToFeed()
         {

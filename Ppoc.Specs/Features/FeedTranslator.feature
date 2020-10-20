@@ -62,3 +62,8 @@ Scenario: http to pcast
   Given I have a feed "http://example.com/feed"
   When it is translated to pcast
   Then it should be feed "pcast://example.com/feed"
+
+Scenario: feed to http
+  Given I have a feed "feed://example.com/feed/"
+  When it is translated to http
+  Then it should be feed "http://example.com/feed/"
