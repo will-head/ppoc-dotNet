@@ -18,6 +18,11 @@ namespace Ppoc
           return this.ReplaceScheme(this.uri, "http");
         }
 
+        public string Https()
+        {
+          return this.ReplaceScheme(this.uri, "https");
+        }
+
         public string Feed()
         {
           return this.ReplaceScheme(this.uri, "feed");

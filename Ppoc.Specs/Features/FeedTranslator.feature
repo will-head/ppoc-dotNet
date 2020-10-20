@@ -67,3 +67,8 @@ Scenario: feed to http
   Given I have a feed "feed://example.com/feed/"
   When it is translated to http
   Then it should be feed "http://example.com/feed/"
+
+Scenario: feed to https
+  Given I have a feed "feed://example.com/feed/"
+  When it is translated to https
+  Then it should be feed "https://example.com/feed/"

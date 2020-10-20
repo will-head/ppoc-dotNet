@@ -28,6 +28,12 @@ namespace Ppoc.Specs.Steps
             _result = _feed_translator.Http();
         }
 
+        [When(@"it is translated to https")]
+        public void WhenItIsTranslatedToHttps()
+        {
+            _result = _feed_translator.Https();
+        }
+
         [When(@"it is translated to feed")]
         public void WhenItIsTranslatedToFeed()
         {
